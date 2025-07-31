@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url();
+    min-height: 100vh;
+
+    & .hero-advert {
+        background: green;
+        height: 15rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        align-content: center;
+
+        &>img {
+            height: 17em;
+            width: 27em;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &>div {
+            color: white;
+            text-align: right;
+            padding-right: 4em;
+            padding-top: 3em;
+
+            >h1 {
+                font-weight: 800;
+                font-size: 3.5em;
+                text-wrap: wrap;
+            }
+
+        }
+    }
+
+    & main {
+        padding: 0 3em;
+    }
+
+    /* style for navigating the categories section */
+    & nav {
+        margin: 2em 0;
+        display: flex;
+        flex-direction: column;
+
+        /* style for the navigating categories heading */
+        & div:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2em;
+
+            & a {
+                text-decoration: none;
+                color: green;
+            }
+        }
+
+        /* style for the navigation categories */
+        & div:nth-child(2) ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+
+            /*  adding borders to the categories */
+            & li {
+                border-style: solid;
+                border-width: 1px 0px 0px 1px;
+                border-color: gray;
+                padding: 2em;
+            }
+
+            & li:nth-child(6) {
+                border-right: 1px solid gray;
+            }
+
+            & li a {
+                text-decoration: none;
+                color: black;
+                font-weight: 600;
+            }
+
+        }
+    }
+
+    /* styles for the popular product section */
+
+    section {
+        & .popular-products>div:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2em;
+
+            & a {
+                text-decoration: none;
+                color: green;
+            }
+        }
+
+        /* style for the products layout */
+        & .products {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            grid-template-rows: auto auto auto;
+            /* justify-items: space-between; */
+            gap: 5rem;
+
+            /* style for the productCard  */
+            & .productCard {
+                min-height: 147px;
+                max-height: 152px;
+                transition: 300ms all linear;
+                row-gap: 3rem;
+                margin-bottom: 3rem;
+
+                >img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                >h4 {
+                    font-weight: 300;
+                    color: black;
+                }
+
+                >span {
+                    color: red;
+                    font-weight: 800;
+                }
+
+                >button {
+                    display: block;
+                    border: none;
+                    background: green;
+                    padding: .4em 1em;
+                    color: whitesmoke;
+                    font-weight: 800;
+                    cursor: pointer;
+                    border-radius: 9px;
+                }
+            }
+
+            & .productCard:hover {
+                transform: scale(105%);
+            }
+        }
+    }
+}

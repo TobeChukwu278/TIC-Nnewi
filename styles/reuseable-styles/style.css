@@ -1,0 +1,5 @@
+.popular-product-btn {
+    display: inline-block;
+    padding: .23rem 1rem;
+    background: var(--main);
+}
